@@ -1,5 +1,4 @@
-
-    <header class="docs-header">
+<header class="docs-header">
       <docs-breadcrumb></docs-breadcrumb>
 
       
@@ -15,7 +14,7 @@
     <p>Now that you've learned <a href="/tutorials/signals/9-query-child-elements-with-signal-queries">querying child elements with signal queries</a>, let's explore how to react to signal changes with effects. Effects are functions that run automatically when their dependencies change, making them perfect for side effects like logging, DOM manipulation, or API calls.</p>
 <p><strong>Important: Effects should be the last API you reach for.</strong> Always prefer <code>computed()</code> for derived values and <code>linkedSignal()</code> for values that can be both derived and manually set. If you find yourself copying data from one signal to another with an effect, it's a sign you should move your source-of-truth higher up and use <code>computed()</code> or <code>linkedSignal()</code> instead. Effects are best for syncing signal state to imperative, non-signal APIs.</p>
 <p>In this activity, you'll learn how to use the <code>effect()</code> function appropriately for legitimate side effects that respond to signal changes.</p>
-<hr />
+<hr>
 
 <p>You have a theme manager app with signals already set up. Now you'll add effects to automatically react to signal changes.</p>
 

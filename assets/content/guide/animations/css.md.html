@@ -1,5 +1,4 @@
-
-    <header class="docs-header">
+<header class="docs-header">
       <docs-breadcrumb></docs-breadcrumb>
 
       
@@ -18,7 +17,7 @@
     <a href="#how-to-write-animations-in-native-css" class="docs-anchor" tabindex="-1" aria-label="Link to How to write animations in native CSS">How to write animations in native CSS</a>
   </h2>
   <p>If you've never written any native CSS animations, there are a number of excellent guides to get you started. Here's a few of them:<br><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations" target="_blank">MDN's CSS Animations guide</a><br><a href="https://www.w3schools.com/css/css3_animations.asp" target="_blank">W3Schools CSS3 Animations guide</a><br><a href="https://www.lambdatest.com/blog/css-animations-tutorial/" target="_blank">The Complete CSS Animations Tutorial</a><br><a href="https://thoughtbot.com/blog/css-animation-for-beginners" target="_blank">CSS Animation for Beginners</a>  </p>
-<p>and a couple of videos:<br><a href="https://www.youtube.com/watch?v=z2LQYsZhsFw" target="_blank">Learn CSS Animation in 9 Minutes</a><br><a href="https://www.youtube.com/watch?v=jgw82b5Y2MU&list=PL4cUxeGkcC9iGYgmEd2dm3zAKzyCGDtM5" target="_blank">Net Ninja CSS Animation Tutorial Playlist</a></p>
+<p>and a couple of videos:<br><a href="https://www.youtube.com/watch?v=z2LQYsZhsFw" target="_blank">Learn CSS Animation in 9 Minutes</a><br><a href="https://www.youtube.com/watch?v=jgw82b5Y2MU&amp;list=PL4cUxeGkcC9iGYgmEd2dm3zAKzyCGDtM5" target="_blank">Net Ninja CSS Animation Tutorial Playlist</a></p>
 <p>Check some of these various guides and tutorials out, and then come back to this guide.</p>
 
   <h2 id="creating-reusable-animations">
@@ -95,7 +94,7 @@
     </div><p>If you don't have to worry about supporting all browsers, you can also check out <code>calc-size()</code>, which is the true solution to animating auto height. See <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/calc-size" target="_blank">MDN's docs</a> and (this tutorial)[<a href="https://frontendmasters.com/blog/one-of-the-boss-battles-of-css-is-almost-won-transitioning-to-auto/]" target="_blank">https://frontendmasters.com/blog/one-of-the-boss-battles-of-css-is-almost-won-transitioning-to-auto/]</a> for more information.</p>
 
   <h3 id="animate-entering-and-leaving-a-view">
-    <a href="#animate-entering-and-leaving-a-view" class="docs-anchor" tabindex="-1" aria-label="Link to Animate entering and leaving a view">Animate entering and leaving a view</a>
+    <a href="#animate-entering-and-leaving-a-view" class="docs-anchor" tabindex="-1" aria-label="Link to Animate entering and leaving a view">为进入和离开视图添加动画效果</a>
   </h3>
   <p>You can create animations for when an item enters a view or leaves a view. Let's start by looking at how to animate an element entering a view. We'll do this with <code>animate.enter</code>, which will apply animation classes when an element enters the view.</p>
 <div class="docs-code-multifile" path="adev/src/content/examples/animations/src/app/native-css/insert.component.ts" preview="true">
@@ -205,7 +204,7 @@
   </div><p>In this example, the <code>rotate</code> and <code>fade-in</code> animations fire at the same time, but have different durations.</p>
 
   <h3 id="animating-the-items-of-a-reordering-list">
-    <a href="#animating-the-items-of-a-reordering-list" class="docs-anchor" tabindex="-1" aria-label="Link to Animating the items of a reordering list">Animating the items of a reordering list</a>
+    <a href="#animating-the-items-of-a-reordering-list" class="docs-anchor" tabindex="-1" aria-label="Link to Animating the items of a reordering list">为重新排序的列表的条目添加动画效果</a>
   </h3>
   <p>Items in a <code>@for</code> loop will be removed and re-added, which will fire off animations using <code>@starting-styles</code> for entry animations. Alternatively, you can use <code>animate.enter</code> for this same behavior. Use <code>animate.leave</code> to animate elements as they are removed, as seen in the example above.</p>
 <div class="docs-code-multifile" path="adev/src/content/examples/animations/src/app/native-css/reorder.component.ts" preview="true">
@@ -226,9 +225,9 @@
   <p>You can retrieve animations off an element directly using <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/getAnimations" target="_blank"><code>Element.getAnimations()</code></a>. This returns an array of every <a href="https://developer.mozilla.org/en-US/docs/Web/API/Animation" target="_blank"><code>Animation</code></a> on that element. You can use the <code>Animation</code> API to do much more than you could with what the <a href="/api/animations/AnimationPlayer"><code>AnimationPlayer</code></a> from the animations package offered. From here you can <code>cancel()</code>, <code>play()</code>, <code>pause()</code>, <code>reverse()</code> and much more. This native API should provide everything you need to control your animations.</p>
 
   <h2 id="more-on-angular-animations">
-    <a href="#more-on-angular-animations" class="docs-anchor" tabindex="-1" aria-label="Link to More on Angular animations">More on Angular animations</a>
+    <a href="#more-on-angular-animations" class="docs-anchor" tabindex="-1" aria-label="Link to More on Angular animations">关于 Angular 动画的更多信息</a>
   </h2>
-  <p>You might also be interested in the following:</p>
+  <p>你可能也会对以下内容感兴趣：</p>
 
     <nav class="docs-pill-row">
       

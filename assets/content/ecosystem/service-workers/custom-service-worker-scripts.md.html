@@ -1,5 +1,4 @@
-
-    <header class="docs-header">
+<header class="docs-header">
       <docs-breadcrumb></docs-breadcrumb>
 
       
@@ -49,7 +48,7 @@
   <p>When extending the Angular service worker:</p>
 
   <ul class="docs-list">
-    <li><strong>Always import the Angular service worker first</strong> using <code>importScripts(&#39;./ngsw-worker.js&#39;)</code> to ensure you get all the caching and update functionality</li>
+    <li><strong>Always import the Angular service worker first</strong> using <code>importScripts('./ngsw-worker.js')</code> to ensure you get all the caching and update functionality</li>
 <li><strong>Wrap your custom code in an IIFE</strong> (Immediately Invoked Function Expression) to avoid polluting the global scope</li>
 <li><strong>Use <code>event.waitUntil()</code></strong> for asynchronous operations to ensure they complete before the service worker is terminated</li>
 <li><strong>Test thoroughly</strong> in both development and production environments</li>

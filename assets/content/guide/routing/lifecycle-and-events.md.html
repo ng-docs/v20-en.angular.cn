@@ -1,5 +1,4 @@
-
-    <header class="docs-header">
+<header class="docs-header">
       <docs-breadcrumb></docs-breadcrumb>
 
       
@@ -24,41 +23,41 @@
       <thead>
         <tr>
 <th>Events</th>
-<th>Description</th>
+<th>描述</th>
 </tr>
 
       </thead>
       <tbody>
         <tr>
-<td><a href="api/router/NavigationStart"><a href="/api/router/NavigationStart"><code>NavigationStart</code></a></a></td>
+<td><a href="api/router/NavigationStart"></a><a href="/api/router/NavigationStart"><code>NavigationStart</code></a></td>
 <td>Occurs when navigation begins and contains the requested URL.</td>
 </tr>
 <tr>
-<td><a href="api/router/RoutesRecognized"><a href="/api/router/RoutesRecognized"><code>RoutesRecognized</code></a></a></td>
+<td><a href="api/router/RoutesRecognized"></a><a href="/api/router/RoutesRecognized"><code>RoutesRecognized</code></a></td>
 <td>Occurs after the router determines which route matches the URL and contains the route state information.</td>
 </tr>
 <tr>
-<td><a href="api/router/GuardsCheckStart"><a href="/api/router/GuardsCheckStart"><code>GuardsCheckStart</code></a></a></td>
+<td><a href="api/router/GuardsCheckStart"></a><a href="/api/router/GuardsCheckStart"><code>GuardsCheckStart</code></a></td>
 <td>Begins the route guard phase. The router evaluates route guards like <code>canActivate</code> and <code>canDeactivate</code>.</td>
 </tr>
 <tr>
-<td><a href="api/router/GuardsCheckEnd"><a href="/api/router/GuardsCheckEnd"><code>GuardsCheckEnd</code></a></a></td>
+<td><a href="api/router/GuardsCheckEnd"></a><a href="/api/router/GuardsCheckEnd"><code>GuardsCheckEnd</code></a></td>
 <td>Signals completion of guard evaluation. Contains the result (allowed/denied).</td>
 </tr>
 <tr>
-<td><a href="api/router/ResolveStart"><a href="/api/router/ResolveStart"><code>ResolveStart</code></a></a></td>
+<td><a href="api/router/ResolveStart"></a><a href="/api/router/ResolveStart"><code>ResolveStart</code></a></td>
 <td>Begins the data resolution phase. Route resolvers start fetching data.</td>
 </tr>
 <tr>
-<td><a href="api/router/ResolveEnd"><a href="/api/router/ResolveEnd"><code>ResolveEnd</code></a></a></td>
+<td><a href="api/router/ResolveEnd"></a><a href="/api/router/ResolveEnd"><code>ResolveEnd</code></a></td>
 <td>Data resolution completes. All required data becomes available.</td>
 </tr>
 <tr>
-<td><a href="api/router/NavigationEnd"><a href="/api/router/NavigationEnd"><code>NavigationEnd</code></a></a></td>
+<td><a href="api/router/NavigationEnd"></a><a href="/api/router/NavigationEnd"><code>NavigationEnd</code></a></td>
 <td>Final event when navigation completes successfully. The router updates the URL.</td>
 </tr>
 <tr>
-<td><a href="api/router/NavigationSkipped"><a href="/api/router/NavigationSkipped"><code>NavigationSkipped</code></a></a></td>
+<td><a href="api/router/NavigationSkipped"></a><a href="/api/router/NavigationSkipped"><code>NavigationSkipped</code></a></td>
 <td>Occurs when the router skips navigation (e.g., same URL navigation).</td>
 </tr>
 
@@ -71,18 +70,18 @@
     <table>
       <thead>
         <tr>
-<th>Event</th>
-<th>Description</th>
+<th>事件</th>
+<th>描述</th>
 </tr>
 
       </thead>
       <tbody>
         <tr>
-<td><a href="api/router/NavigationCancel"><a href="/api/router/NavigationCancel"><code>NavigationCancel</code></a></a></td>
+<td><a href="api/router/NavigationCancel"></a><a href="/api/router/NavigationCancel"><code>NavigationCancel</code></a></td>
 <td>Occurs when the router cancels navigation. Often due to a guard returning false.</td>
 </tr>
 <tr>
-<td><a href="api/router/NavigationError"><a href="/api/router/NavigationError"><code>NavigationError</code></a></a></td>
+<td><a href="api/router/NavigationError"></a><a href="/api/router/NavigationError"><code>NavigationError</code></a></td>
 <td>Occurs when navigation fails. Could be due to invalid routes or resolver errors.</td>
 </tr>
 
@@ -98,7 +97,7 @@
 <div class="docs-code">
     
     <pre class="shiki shiki-themes github-light github-dark" style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;--shiki-light-bg:#fff;--shiki-dark-bg:#24292e" tabindex="0"><code><span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">// Example of subscribing to router events</span></span><span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">import</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> { <a href="/api/core/Component">Component</a>, inject, signal, effect } </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">from</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> '@angular/core'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">;</span></span><span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">import</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> { <a href="/api/router/Event">Event</a>, Router, NavigationStart, NavigationEnd } </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">from</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> '@angular/router'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">;</span></span><span class="line"></span><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">@</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"><a href="/api/core/Component">Component</a></span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">({ </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">...</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> })</span></span><span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">export</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> class</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> RouterEventsComponent</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> {</span></span><span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">  private</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> readonly</span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70"> router</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> =</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> inject</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(<a href="/api/router/Router">Router</a>);</span></span><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  </span></span><span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">  constructor</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">() {</span></span><span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">    // Subscribe to router events and react to events</span></span><span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">    this</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">.router.events.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">pipe</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"><a href="/api/core/rxjs-interop/takeUntilDestroyed">takeUntilDestroyed</a></span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">()).</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">subscribe</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">((</span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">event</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">:</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> <a href="/api/router/Event">Event</a></span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">) </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=&gt;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> {</span></span><span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">      if</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> (event </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">instanceof</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> <a href="/api/router/NavigationStart">NavigationStart</a></span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">) {</span></span><span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">        // <a href="/api/router/Navigation">Navigation</a> starting</span></span><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        console.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">log</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'<a href="/api/router/Navigation">Navigation</a> starting:'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, event.url);</span></span><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      }</span></span><span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">      if</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> (event </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">instanceof</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> <a href="/api/router/NavigationEnd">NavigationEnd</a></span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">) {</span></span><span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">        // <a href="/api/router/Navigation">Navigation</a> completed</span></span><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        console.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">log</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'<a href="/api/router/Navigation">Navigation</a> completed:'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, event.url);</span></span><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      }</span></span><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    });</span></span><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  }</span></span><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">}</span></span></code></pre>
-  </div><p>Note: The <a href="api/router/Event"><a href="/api/router/Event"><code>Event</code></a></a> type from <code>@angular/router</code> is named the same as the regular global <a href="https://developer.mozilla.org/en-US/docs/Web/API/Event" target="_blank"><a href="/api/router/Event"><code>Event</code></a></a> type, but it is different from the <a href="api/router/RouterEvent"><a href="/api/router/RouterEvent"><code>RouterEvent</code></a></a> type.</p>
+  </div><p>Note: The <a href="api/router/Event"></a><a href="/api/router/Event"><code>Event</code></a> type from <code>@angular/router</code> is named the same as the regular global <a href="https://developer.mozilla.org/en-US/docs/Web/API/Event" target="_blank"></a><a href="/api/router/Event"><code>Event</code></a> type, but it is different from the <a href="api/router/RouterEvent"></a><a href="/api/router/RouterEvent"><code>RouterEvent</code></a> type.</p>
 
   <h2 id="how-to-debug-routing-events">
     <a href="#how-to-debug-routing-events" class="docs-anchor" tabindex="-1" aria-label="Link to How to debug routing events">How to debug routing events</a>
@@ -108,7 +107,7 @@
 <div class="docs-code">
     
     <pre class="shiki shiki-themes github-light github-dark" style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;--shiki-light-bg:#fff;--shiki-dark-bg:#24292e" tabindex="0"><code><span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">import</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> { <a href="/api/router/provideRouter">provideRouter</a>, withDebugTracing } </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">from</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> '@angular/router'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">;</span></span><span class="line"></span><span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">const</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> appRoutes</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">:</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> <a href="/api/router/Routes">Routes</a></span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> =</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> [];</span></span><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"><a href="/api/platform-browser/bootstrapApplication">bootstrapApplication</a></span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(AppComponent,</span></span><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  {</span></span><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    providers: [</span></span><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">      <a href="/api/router/provideRouter">provideRouter</a></span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(appRoutes, </span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"><a href="/api/router/withDebugTracing">withDebugTracing</a></span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">())</span></span><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    ]</span></span><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  }</span></span><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">);</span></span></code></pre>
-  </div><p>For more information, check out the official docs on <a href="api/router/withDebugTracing"><a href="/api/router/withDebugTracing"><code>withDebugTracing</code></a></a>.</p>
+  </div><p>For more information, check out the official docs on <a href="api/router/withDebugTracing"></a><a href="/api/router/withDebugTracing"><code>withDebugTracing</code></a>.</p>
 
   <h2 id="common-use-cases">
     <a href="#common-use-cases" class="docs-anchor" tabindex="-1" aria-label="Link to Common use cases">Common use cases</a>
@@ -153,42 +152,42 @@
     <table>
       <thead>
         <tr>
-<th>Event</th>
-<th>Description</th>
+<th>事件</th>
+<th>描述</th>
 </tr>
 
       </thead>
       <tbody>
         <tr>
-<td><a href="api/router/NavigationStart"><a href="/api/router/NavigationStart"><code>NavigationStart</code></a></a></td>
+<td><a href="api/router/NavigationStart"></a><a href="/api/router/NavigationStart"><code>NavigationStart</code></a></td>
 <td>Occurs when navigation starts</td>
 </tr>
 <tr>
-<td><a href="api/router/RouteConfigLoadStart"><a href="/api/router/RouteConfigLoadStart"><code>RouteConfigLoadStart</code></a></a></td>
+<td><a href="api/router/RouteConfigLoadStart"></a><a href="/api/router/RouteConfigLoadStart"><code>RouteConfigLoadStart</code></a></td>
 <td>Occurs before lazy loading a route configuration</td>
 </tr>
 <tr>
-<td><a href="api/router/RouteConfigLoadEnd"><a href="/api/router/RouteConfigLoadEnd"><code>RouteConfigLoadEnd</code></a></a></td>
+<td><a href="api/router/RouteConfigLoadEnd"></a><a href="/api/router/RouteConfigLoadEnd"><code>RouteConfigLoadEnd</code></a></td>
 <td>Occurs after a lazy-loaded route configuration loads</td>
 </tr>
 <tr>
-<td><a href="api/router/RoutesRecognized"><a href="/api/router/RoutesRecognized"><code>RoutesRecognized</code></a></a></td>
+<td><a href="api/router/RoutesRecognized"></a><a href="/api/router/RoutesRecognized"><code>RoutesRecognized</code></a></td>
 <td>Occurs when the router parses the URL and recognizes the routes</td>
 </tr>
 <tr>
-<td><a href="api/router/GuardsCheckStart"><a href="/api/router/GuardsCheckStart"><code>GuardsCheckStart</code></a></a></td>
+<td><a href="api/router/GuardsCheckStart"></a><a href="/api/router/GuardsCheckStart"><code>GuardsCheckStart</code></a></td>
 <td>Occurs at the start of the guard phase</td>
 </tr>
 <tr>
-<td><a href="api/router/GuardsCheckEnd"><a href="/api/router/GuardsCheckEnd"><code>GuardsCheckEnd</code></a></a></td>
+<td><a href="api/router/GuardsCheckEnd"></a><a href="/api/router/GuardsCheckEnd"><code>GuardsCheckEnd</code></a></td>
 <td>Occurs at the end of the guard phase</td>
 </tr>
 <tr>
-<td><a href="api/router/ResolveStart"><a href="/api/router/ResolveStart"><code>ResolveStart</code></a></a></td>
+<td><a href="api/router/ResolveStart"></a><a href="/api/router/ResolveStart"><code>ResolveStart</code></a></td>
 <td>Occurs at the start of the resolve phase</td>
 </tr>
 <tr>
-<td><a href="api/router/ResolveEnd"><a href="/api/router/ResolveEnd"><code>ResolveEnd</code></a></a></td>
+<td><a href="api/router/ResolveEnd"></a><a href="/api/router/ResolveEnd"><code>ResolveEnd</code></a></td>
 <td>Occurs at the end of the resolve phase</td>
 </tr>
 
@@ -205,26 +204,26 @@
     <table>
       <thead>
         <tr>
-<th>Event</th>
-<th>Description</th>
+<th>事件</th>
+<th>描述</th>
 </tr>
 
       </thead>
       <tbody>
         <tr>
-<td><a href="api/router/ActivationStart"><a href="/api/router/ActivationStart"><code>ActivationStart</code></a></a></td>
+<td><a href="api/router/ActivationStart"></a><a href="/api/router/ActivationStart"><code>ActivationStart</code></a></td>
 <td>Occurs at the start of route activation</td>
 </tr>
 <tr>
-<td><a href="api/router/ChildActivationStart"><a href="/api/router/ChildActivationStart"><code>ChildActivationStart</code></a></a></td>
+<td><a href="api/router/ChildActivationStart"></a><a href="/api/router/ChildActivationStart"><code>ChildActivationStart</code></a></td>
 <td>Occurs at the start of child route activation</td>
 </tr>
 <tr>
-<td><a href="api/router/ActivationEnd"><a href="/api/router/ActivationEnd"><code>ActivationEnd</code></a></a></td>
+<td><a href="api/router/ActivationEnd"></a><a href="/api/router/ActivationEnd"><code>ActivationEnd</code></a></td>
 <td>Occurs at the end of route activation</td>
 </tr>
 <tr>
-<td><a href="api/router/ChildActivationEnd"><a href="/api/router/ChildActivationEnd"><code>ChildActivationEnd</code></a></a></td>
+<td><a href="api/router/ChildActivationEnd"></a><a href="/api/router/ChildActivationEnd"><code>ChildActivationEnd</code></a></td>
 <td>Occurs at the end of child route activation</td>
 </tr>
 
@@ -241,26 +240,26 @@
     <table>
       <thead>
         <tr>
-<th>Event</th>
-<th>Description</th>
+<th>事件</th>
+<th>描述</th>
 </tr>
 
       </thead>
       <tbody>
         <tr>
-<td><a href="api/router/NavigationEnd"><a href="/api/router/NavigationEnd"><code>NavigationEnd</code></a></a></td>
+<td><a href="api/router/NavigationEnd"></a><a href="/api/router/NavigationEnd"><code>NavigationEnd</code></a></td>
 <td>Occurs when navigation ends successfully</td>
 </tr>
 <tr>
-<td><a href="api/router/NavigationCancel"><a href="/api/router/NavigationCancel"><code>NavigationCancel</code></a></a></td>
+<td><a href="api/router/NavigationCancel"></a><a href="/api/router/NavigationCancel"><code>NavigationCancel</code></a></td>
 <td>Occurs when the router cancels navigation</td>
 </tr>
 <tr>
-<td><a href="api/router/NavigationError"><a href="/api/router/NavigationError"><code>NavigationError</code></a></a></td>
+<td><a href="api/router/NavigationError"></a><a href="/api/router/NavigationError"><code>NavigationError</code></a></td>
 <td>Occurs when navigation fails due to an unexpected error</td>
 </tr>
 <tr>
-<td><a href="api/router/NavigationSkipped"><a href="/api/router/NavigationSkipped"><code>NavigationSkipped</code></a></a></td>
+<td><a href="api/router/NavigationSkipped"></a><a href="/api/router/NavigationSkipped"><code>NavigationSkipped</code></a></td>
 <td>Occurs when the router skips navigation (e.g., same URL navigation)</td>
 </tr>
 
@@ -277,14 +276,14 @@
     <table>
       <thead>
         <tr>
-<th>Event</th>
-<th>Description</th>
+<th>事件</th>
+<th>描述</th>
 </tr>
 
       </thead>
       <tbody>
         <tr>
-<td><a href="api/router/Scroll"><a href="/api/router/Scroll"><code>Scroll</code></a></a></td>
+<td><a href="api/router/Scroll"></a><a href="/api/router/Scroll"><code>Scroll</code></a></td>
 <td>Occurs during scrolling</td>
 </tr>
 
@@ -293,6 +292,6 @@
   </div>
   
   <h2 id="next-steps">
-    <a href="#next-steps" class="docs-anchor" tabindex="-1" aria-label="Link to Next steps">Next steps</a>
+    <a href="#next-steps" class="docs-anchor" tabindex="-1" aria-label="Link to Next steps">后续步骤</a>
   </h2>
   <p>Learn more about <a href="/guide/routing/route-guards">route guards</a> and <a href="/guide/routing/common-router-tasks">common router tasks</a>.</p>

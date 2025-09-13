@@ -1,5 +1,4 @@
-
-    <header class="docs-header">
+<header class="docs-header">
       <docs-breadcrumb></docs-breadcrumb>
 
       
@@ -12,7 +11,7 @@
     </a>
   </div>
     </header>
-    <p>Interacting with AI and Large Language Model (LLM) APIs introduces unique challenges, such as managing asynchronous operations, handling streaming data, and designing a responsive user experience for potentially slow or unreliable network requests. Angular <a href="guide/signals">signals</a> and the <a href="guide/signals/resource"><a href="/api/core/resource"><code>resource</code></a></a> API provide powerful tools to solve these problems elegantly.</p>
+    <p>Interacting with AI and Large Language Model (LLM) APIs introduces unique challenges, such as managing asynchronous operations, handling streaming data, and designing a responsive user experience for potentially slow or unreliable network requests. Angular <a href="guide/signals">signals</a> and the <a href="guide/signals/resource"></a><a href="/api/core/resource"><code>resource</code></a> API provide powerful tools to solve these problems elegantly.</p>
 
   <h2 id="triggering-requests-with-signals">
     <a href="#triggering-requests-with-signals" class="docs-anchor" tabindex="-1" aria-label="Link to Triggering requests with signals">Triggering requests with signals</a>
@@ -26,7 +25,7 @@
 
     </ol>
     <p>This setup ensures the resource's <strong><code>loader</code></strong> function only runs when the user explicitly submits their prompt, not on every keystroke. You can use additional signal parameters, like a <code>sessionId</code> or <code>userId</code> (which can be useful for creating persistent LLM sessions), in the <code>loader</code> field. This way, the request always uses these parameters' current values without re-triggering the asyncronous function defined in the <code>loader</code> field.</p>
-<p>Many AI SDKs provide helper methods for making API calls. For example, the Genkit client library exposes a <code>runFlow</code> method for calling Genkit flows, which you can call from a resource's <code>loader</code>. For other APIs, you can use the <a href="guide/signals/resource#reactive-data-fetching-with-httpresource"><a href="/api/common/http/httpResource"><code>httpResource</code></a></a>.</p>
+<p>Many AI SDKs provide helper methods for making API calls. For example, the Genkit client library exposes a <code>runFlow</code> method for calling Genkit flows, which you can call from a resource's <code>loader</code>. For other APIs, you can use the <a href="guide/signals/resource#reactive-data-fetching-with-httpresource"></a><a href="/api/common/http/httpResource"><code>httpResource</code></a>.</p>
 <p>The following example shows a <a href="/api/core/resource"><code>resource</code></a> that fetches parts of an AI-generated story. The <code>loader</code> is triggered only when the <code>storyInput</code> signal changes.</p>
 <div class="docs-code">
     

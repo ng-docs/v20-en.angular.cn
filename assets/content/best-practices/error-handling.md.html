@@ -1,5 +1,4 @@
-
-    <header class="docs-header">
+<header class="docs-header">
       <docs-breadcrumb></docs-breadcrumb>
 
       
@@ -35,7 +34,7 @@
   <h3 id="testbed-rethrows-errors-by-default">
     <a href="#testbed-rethrows-errors-by-default" class="docs-anchor" tabindex="-1" aria-label="Link to <code>TestBed</code> rethrows errors by default"><code>TestBed</code> rethrows errors by default</a>
   </h3>
-  <p>In many cases, <a href="/api/core/ErrorHandler"><code>ErrorHandler</code></a> may only log errors and otherwise allow the application to continue running. In tests, however, you almost always want to surface these errors. Angular's <a href="/api/core/testing/TestBed"><code>TestBed</code></a> rethrows unexpected errors to ensure that errors caught by the framework cannot be unintentionally missed or ignored. In rare circumstances, a test may specifically attempt to ensure errors do not cause the application to be unresponsive or crash. In these situations, you can <a href="api/core/testing/TestModuleMetadata#rethrowApplicationErrors">configure <a href="/api/core/testing/TestBed"><code>TestBed</code></a> to <em>not</em> rethrow application errors</a> with <a href="/api/core/testing/TestBed#configureTestingModule({rethrowApplicationErrors: false})"><code>TestBed.configureTestingModule({rethrowApplicationErrors: false})</code></a>.</p>
+  <p>In many cases, <a href="/api/core/ErrorHandler"><code>ErrorHandler</code></a> may only log errors and otherwise allow the application to continue running. In tests, however, you almost always want to surface these errors. Angular's <a href="/api/core/testing/TestBed"><code>TestBed</code></a> rethrows unexpected errors to ensure that errors caught by the framework cannot be unintentionally missed or ignored. In rare circumstances, a test may specifically attempt to ensure errors do not cause the application to be unresponsive or crash. In these situations, you can <a href="api/core/testing/TestModuleMetadata#rethrowApplicationErrors">configure </a><a href="/api/core/testing/TestBed"><code>TestBed</code></a> to <em>not</em> rethrow application errors with <a href="/api/core/testing/TestBed#configureTestingModule({rethrowApplicationErrors: false})"><code>TestBed.configureTestingModule({rethrowApplicationErrors: false})</code></a>.</p>
 
   <h2 id="global-error-listeners">
     <a href="#global-error-listeners" class="docs-anchor" tabindex="-1" aria-label="Link to Global error listeners">Global error listeners</a>
@@ -45,15 +44,15 @@
   <h3 id="client-side-rendering">
     <a href="#client-side-rendering" class="docs-anchor" tabindex="-1" aria-label="Link to Client-side rendering">Client-side rendering</a>
   </h3>
-  <p>Adding <a href="/api/core/provideBrowserGlobalErrorListeners"><a href="/api/core/provideBrowserGlobalErrorListeners"><code>provideBrowserGlobalErrorListeners()</code></a></a> to the <a href="guide/di/dependency-injection#at-the-application-root-level-using-applicationconfig">ApplicationConfig</a> adds the <code>&#39;error&#39;</code> and <code>&#39;unhandledrejection&#39;</code> listeners to the browser window and forwards those errors to <a href="/api/core/ErrorHandler"><code>ErrorHandler</code></a>. The Angular CLI generates new applications with this provider by default. The Angular team recommends handling these global errors for most applications, either with the framework's built-in listeners or with your own custom listeners. If you provide custom listeners, you can remove <a href="/api/core/provideBrowserGlobalErrorListeners"><code>provideBrowserGlobalErrorListeners</code></a>.</p>
+  <p>Adding <a href="/api/core/provideBrowserGlobalErrorListeners"></a><a href="/api/core/provideBrowserGlobalErrorListeners"><code>provideBrowserGlobalErrorListeners()</code></a> to the <a href="guide/di/dependency-injection#at-the-application-root-level-using-applicationconfig">ApplicationConfig</a> adds the <code>'error'</code> and <code>'unhandledrejection'</code> listeners to the browser window and forwards those errors to <a href="/api/core/ErrorHandler"><code>ErrorHandler</code></a>. The Angular CLI generates new applications with this provider by default. The Angular team recommends handling these global errors for most applications, either with the framework's built-in listeners or with your own custom listeners. If you provide custom listeners, you can remove <a href="/api/core/provideBrowserGlobalErrorListeners"><code>provideBrowserGlobalErrorListeners</code></a>.</p>
 
   <h3 id="server-side-and-hybrid-rendering">
     <a href="#server-side-and-hybrid-rendering" class="docs-anchor" tabindex="-1" aria-label="Link to Server-side and hybrid rendering">Server-side and hybrid rendering</a>
   </h3>
-  <p>When using <a href="guide/ssr">Angular with SSR</a>, Angular automatically adds the <code>&#39;unhandledRejection&#39;</code> and <code>&#39;uncaughtException&#39;</code> listeners to the server process. These handlers prevent the server from crashing and instead log captured errors to the console.</p>
+  <p>When using <a href="guide/ssr">Angular with SSR</a>, Angular automatically adds the <code>'unhandledRejection'</code> and <code>'uncaughtException'</code> listeners to the server process. These handlers prevent the server from crashing and instead log captured errors to the console.</p>
 
     <div class="docs-alert docs-alert-important">
-    <p><strong>IMPORTANT:</strong> If the application is using Zone.js, only the <code>&#39;unhandledRejection&#39;</code> handler is added. When Zone.js is present, errors inside the Application's Zone are already forwarded to the application <a href="/api/core/ErrorHandler"><code>ErrorHandler</code></a> and do not reach the server process.</p>
+    <p><strong>IMPORTANT:</strong> If the application is using Zone.js, only the <code>'unhandledRejection'</code> handler is added. When Zone.js is present, errors inside the Application's Zone are already forwarded to the application <a href="/api/core/ErrorHandler"><code>ErrorHandler</code></a> and do not reach the server process.</p>
 
     </div>
     

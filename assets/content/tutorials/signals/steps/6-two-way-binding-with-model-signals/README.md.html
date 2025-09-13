@@ -1,5 +1,4 @@
-
-    <header class="docs-header">
+<header class="docs-header">
       <docs-breadcrumb></docs-breadcrumb>
 
       
@@ -14,7 +13,7 @@
     </header>
     <p>Now that you've learned <a href="/tutorials/signals/5-component-communication-with-signals">passing data to components with input signals</a>, let's explore Angular's <code>model()</code> API for two-way binding. Model signals are perfect for UI components like checkboxes, sliders, or custom form controls where the component needs to both receive a value AND update it.</p>
 <p>In this activity, you'll create a custom checkbox component that manages its own state while keeping the parent synchronized.</p>
-<hr />
+<hr>
 
 
     <ol class="docs-steps">
@@ -79,8 +78,8 @@
 <p>Part 1. <strong>Uncomment the checkboxes and add two-way binding:</strong></p>
 
   <ul class="docs-list">
-    <li>Replace <code>___ADD_TWO_WAY_BINDING___</code> with <code>[(checked)]=&quot;agreedToTerms&quot;</code> for the first checkbox</li>
-<li>Replace <code>___ADD_TWO_WAY_BINDING___</code> with <code>[(checked)]=&quot;enableNotifications&quot;</code> for the second</li>
+    <li>Replace <code>___ADD_TWO_WAY_BINDING___</code> with <code>[(checked)]="agreedToTerms"</code> for the first checkbox</li>
+<li>Replace <code>___ADD_TWO_WAY_BINDING___</code> with <code>[(checked)]="enableNotifications"</code> for the second</li>
 
   </ul>
   <p>Part 2. <strong>Replace the <code>???</code> placeholders with @if blocks:</strong></p>

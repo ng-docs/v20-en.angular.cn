@@ -1,11 +1,10 @@
-
-    <header class="docs-header">
+<header class="docs-header">
       <docs-breadcrumb></docs-breadcrumb>
 
       
   <!-- Page title -->
   <div class="docs-page-title">
-    <h1 tabindex="-1">Route transition animations</h1>
+    <h1 tabindex="-1">路由过渡动画</h1>
     <a class="docs-github-links" target="_blank" href="https://github.com/angular/angular/edit/main/adev/src/content/guide/routing/route-transition-animations.md" title="Edit this page" aria-label="Edit this page">
       <!-- Pencil -->
       <docs-icon role="presentation">edit</docs-icon>
@@ -20,7 +19,7 @@
     </div>
     
   <h2 id="how-view-transitions-work">
-    <a href="#how-view-transitions-work" class="docs-anchor" tabindex="-1" aria-label="Link to How View Transitions work">How View Transitions work</a>
+    <a href="#how-view-transitions-work" class="docs-anchor" tabindex="-1" aria-label="Link to How View Transitions work">View Transitions 的工作原理</a>
   </h2>
   <p>View transitions use the browser's native <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/startViewTransition" target="_blank"><code>document.startViewTransition</code> API</a> to create smooth animations between different states of your application. The API works by:</p>
 
@@ -38,7 +37,7 @@
   </div><p>For more details about the browser API, see the <a href="https://developer.chrome.com/docs/web-platform/view-transitions" target="_blank">Chrome Explainer</a>.</p>
 
   <h2 id="how-the-router-uses-view-transitions">
-    <a href="#how-the-router-uses-view-transitions" class="docs-anchor" tabindex="-1" aria-label="Link to How the Router uses view transitions">How the Router uses view transitions</a>
+    <a href="#how-the-router-uses-view-transitions" class="docs-anchor" tabindex="-1" aria-label="Link to How the Router uses view transitions">路由器如何使用视图过渡</a>
   </h2>
   <p>Angular Router integrates view transitions into the navigation lifecycle to create seamless route changes. During navigation, the Router:</p>
 
@@ -52,7 +51,7 @@
     <p>The Router's view transition integration acts as a <a href="https://developer.mozilla.org/en-US/docs/Glossary/Progressive_Enhancement" target="_blank">progressive enhancement</a>. When browsers don't support the View Transitions API, the Router performs normal DOM updates without animation, ensuring your application works across all browsers.</p>
 
   <h2 id="enabling-view-transitions-in-the-router">
-    <a href="#enabling-view-transitions-in-the-router" class="docs-anchor" tabindex="-1" aria-label="Link to Enabling View Transitions in the Router">Enabling View Transitions in the Router</a>
+    <a href="#enabling-view-transitions-in-the-router" class="docs-anchor" tabindex="-1" aria-label="Link to Enabling View Transitions in the Router">在路由器中启用 View Transitions</a>
   </h2>
   <p>Enable view transitions by adding the <a href="/api/router/withViewTransitions"><code>withViewTransitions</code></a> feature to your <a href="/guide/routing/define-routes#adding-the-router-to-your-application">router configuration</a>. Angular supports both standalone and NgModule bootstrap approaches:</p>
 
@@ -93,7 +92,7 @@
     <p><strong>IMPORTANT:</strong> Define view transition animations in your global styles file, not in component styles. Angular's <a href="/guide/components/styling#view-encapsulation">view encapsulation</a> scopes component styles, which prevents them from targeting the transition pseudo-elements correctly.</p>
 
     </div>
-    <p><a href="https://stackblitz.com/edit/stackblitz-starters-fwn4i7?file=src%2Fmain.ts" target="_blank">Try the updated “count” example on StackBlitz</a></p>
+    <p><a href="https://stackblitz.com/edit/stackblitz-starters-fwn4i7?file=src%2Fmain.ts" target="_blank">在 StackBlitz 上试试更新后的 “count” 范例</a></p>
 
   <h2 id="advanced-transition-control-with-onviewtransitioncreated">
     <a href="#advanced-transition-control-with-onviewtransitioncreated" class="docs-anchor" tabindex="-1" aria-label="Link to Advanced transition control with onViewTransitionCreated">Advanced transition control with onViewTransitionCreated</a>
@@ -102,11 +101,11 @@
 
   <ul class="docs-list">
     <li>Runs in an <a href="/guide/di/dependency-injection-context#run-within-an-injection-context">injection context</a></li>
-<li>Receives a <a href="/api/router/ViewTransitionInfo"><a href="/api/router/ViewTransitionInfo"><code>ViewTransitionInfo</code></a></a> object containing:
+<li>Receives a <a href="/api/router/ViewTransitionInfo"></a><a href="/api/router/ViewTransitionInfo"><code>ViewTransitionInfo</code></a> object containing:
   <ul class="docs-list">
     <li>The <code>ViewTransition</code> instance from <code>startViewTransition</code></li>
-<li>The <a href="/api/router/ActivatedRouteSnapshot"><a href="/api/router/ActivatedRouteSnapshot"><code>ActivatedRouteSnapshot</code></a></a> for the route being navigated from</li>
-<li>The <a href="/api/router/ActivatedRouteSnapshot"><a href="/api/router/ActivatedRouteSnapshot"><code>ActivatedRouteSnapshot</code></a></a> for the route being navigated to</li>
+<li>The <a href="/api/router/ActivatedRouteSnapshot"></a><a href="/api/router/ActivatedRouteSnapshot"><code>ActivatedRouteSnapshot</code></a> for the route being navigated from</li>
+<li>The <a href="/api/router/ActivatedRouteSnapshot"></a><a href="/api/router/ActivatedRouteSnapshot"><code>ActivatedRouteSnapshot</code></a> for the route being navigated to</li>
 
   </ul>
   </li>
@@ -119,7 +118,7 @@
   </div><p>This example skips the view transition when navigation only changes the <a href="/guide/routing/read-route-state#query-parameters">URL fragment or query parameters</a> (such as anchor links within the same page). The <code>skipTransition()</code> method prevents the animation while still allowing the navigation to complete.</p>
 
   <h2 id="examples-from-the-chrome-explainer-adapted-to-angular">
-    <a href="#examples-from-the-chrome-explainer-adapted-to-angular" class="docs-anchor" tabindex="-1" aria-label="Link to Examples from the Chrome explainer adapted to Angular">Examples from the Chrome explainer adapted to Angular</a>
+    <a href="#examples-from-the-chrome-explainer-adapted-to-angular" class="docs-anchor" tabindex="-1" aria-label="Link to Examples from the Chrome explainer adapted to Angular">从 Chrome explainer 改编为 Angular 的范例</a>
   </h2>
   <p>The following examples demonstrate various view transition techniques adapted from the Chrome team's documentation for use with Angular Router:</p>
 
@@ -130,23 +129,23 @@
 
   <ul class="docs-list">
     <li><a href="https://developer.chrome.com/docs/web-platform/view-transitions/same-document#transitioning_elements_dont_need_to_be_the_same_dom_element" target="_blank">Chrome Explainer</a></li>
-<li><a href="https://stackblitz.com/edit/stackblitz-starters-dh8npr?file=src%2Fmain.ts" target="_blank">Angular Example on StackBlitz</a></li>
+<li><a href="https://stackblitz.com/edit/stackblitz-starters-dh8npr?file=src%2Fmain.ts" target="_blank">StackBlitz 上的 Angular 范例</a></li>
 
   </ul>
   
   <h3 id="custom-entry-and-exit-animations">
-    <a href="#custom-entry-and-exit-animations" class="docs-anchor" tabindex="-1" aria-label="Link to Custom entry and exit animations">Custom entry and exit animations</a>
+    <a href="#custom-entry-and-exit-animations" class="docs-anchor" tabindex="-1" aria-label="Link to Custom entry and exit animations">自定义进入和退出动画</a>
   </h3>
   <p>Create unique animations for elements entering and leaving the viewport during route transitions.</p>
 
   <ul class="docs-list">
     <li><a href="https://developer.chrome.com/docs/web-platform/view-transitions/same-document#custom_entry_and_exit_transitions" target="_blank">Chrome Explainer</a></li>
-<li><a href="https://stackblitz.com/edit/stackblitz-starters-8kly3o" target="_blank">Angular Example on StackBlitz</a></li>
+<li><a href="https://stackblitz.com/edit/stackblitz-starters-8kly3o" target="_blank">StackBlitz 上的 Angular 范例</a></li>
 
   </ul>
   
   <h3 id="async-dom-updates-and-waiting-for-content">
-    <a href="#async-dom-updates-and-waiting-for-content" class="docs-anchor" tabindex="-1" aria-label="Link to Async DOM updates and waiting for content">Async DOM updates and waiting for content</a>
+    <a href="#async-dom-updates-and-waiting-for-content" class="docs-anchor" tabindex="-1" aria-label="Link to Async DOM updates and waiting for content">异步 DOM 更新和等待内容</a>
   </h3>
   <p>Angular Router prioritizes immediate transitions over waiting for additional content to load.</p>
 
@@ -161,35 +160,35 @@
     </div>
     
   <h3 id="handle-multiple-view-transition-styles-with-view-transition-types">
-    <a href="#handle-multiple-view-transition-styles-with-view-transition-types" class="docs-anchor" tabindex="-1" aria-label="Link to Handle multiple view transition styles with view transition types">Handle multiple view transition styles with view transition types</a>
+    <a href="#handle-multiple-view-transition-styles-with-view-transition-types" class="docs-anchor" tabindex="-1" aria-label="Link to Handle multiple view transition styles with view transition types">使用视图过渡类型处理多种视图过渡样式</a>
   </h3>
   <p>Use view transition types to apply different animation styles based on navigation context.</p>
 
   <ul class="docs-list">
     <li><a href="https://developer.chrome.com/docs/web-platform/view-transitions/same-document#view-transition-types" target="_blank">Chrome Explainer</a></li>
-<li><a href="https://stackblitz.com/edit/stackblitz-starters-vxzcam" target="_blank">Angular Example on StackBlitz</a></li>
+<li><a href="https://stackblitz.com/edit/stackblitz-starters-vxzcam" target="_blank">StackBlitz 上的 Angular 范例</a></li>
 
   </ul>
   
   <h3 id="handle-multiple-view-transition-styles-with-a-class-name-on-the-view-transition-root-deprecated">
-    <a href="#handle-multiple-view-transition-styles-with-a-class-name-on-the-view-transition-root-deprecated" class="docs-anchor" tabindex="-1" aria-label="Link to Handle multiple view transition styles with a class name on the view transition root (deprecated)">Handle multiple view transition styles with a class name on the view transition root (deprecated)</a>
+    <a href="#handle-multiple-view-transition-styles-with-a-class-name-on-the-view-transition-root-deprecated" class="docs-anchor" tabindex="-1" aria-label="Link to Handle multiple view transition styles with a class name on the view transition root (deprecated)">使用视图过渡根上的类名处理多种视图过渡样式（已弃用）</a>
   </h3>
   <p>This approach uses CSS classes on the transition root element to control animation styles.</p>
 
   <ul class="docs-list">
     <li><a href="https://developer.chrome.com/docs/web-platform/view-transitions/same-document#changing-on-navigation-type" target="_blank">Chrome Explainer</a></li>
-<li><a href="https://stackblitz.com/edit/stackblitz-starters-nmnzzg?file=src%2Fmain.ts" target="_blank">Angular Example on StackBlitz</a></li>
+<li><a href="https://stackblitz.com/edit/stackblitz-starters-nmnzzg?file=src%2Fmain.ts" target="_blank">StackBlitz 上的 Angular 范例</a></li>
 
   </ul>
   
   <h3 id="transitioning-without-freezing-other-animations">
-    <a href="#transitioning-without-freezing-other-animations" class="docs-anchor" tabindex="-1" aria-label="Link to Transitioning without freezing other animations">Transitioning without freezing other animations</a>
+    <a href="#transitioning-without-freezing-other-animations" class="docs-anchor" tabindex="-1" aria-label="Link to Transitioning without freezing other animations">过渡时无需冻结其他动画</a>
   </h3>
   <p>Maintain other page animations during view transitions to create more dynamic user experiences.</p>
 
   <ul class="docs-list">
     <li><a href="https://developer.chrome.com/docs/web-platform/view-transitions/same-document#transitioning-without-freezing" target="_blank">Chrome Explainer</a></li>
-<li><a href="https://stackblitz.com/edit/stackblitz-starters-76kgww" target="_blank">Angular Example on StackBlitz</a></li>
+<li><a href="https://stackblitz.com/edit/stackblitz-starters-76kgww" target="_blank">StackBlitz 上的 Angular 范例</a></li>
 
   </ul>
   
@@ -200,7 +199,7 @@
 
   <ul class="docs-list">
     <li><a href="https://developer.chrome.com/docs/web-platform/view-transitions/same-document#animating-with-javascript" target="_blank">Chrome Explainer</a></li>
-<li><a href="https://stackblitz.com/edit/stackblitz-starters-cklnkm" target="_blank">Angular Example on StackBlitz</a></li>
+<li><a href="https://stackblitz.com/edit/stackblitz-starters-cklnkm" target="_blank">StackBlitz 上的 Angular 范例</a></li>
 
   </ul>
   

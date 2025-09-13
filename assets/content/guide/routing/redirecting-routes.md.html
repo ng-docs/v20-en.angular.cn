@@ -1,5 +1,4 @@
-
-    <header class="docs-header">
+<header class="docs-header">
       <docs-breadcrumb></docs-breadcrumb>
 
       
@@ -40,18 +39,18 @@
     <table>
       <thead>
         <tr>
-<th>Value</th>
-<th>Description</th>
+<th>值</th>
+<th>描述</th>
 </tr>
 
       </thead>
       <tbody>
         <tr>
-<td><code>&#39;full&#39;</code></td>
+<td><code>'full'</code></td>
 <td>The entire URL path must match exactly</td>
 </tr>
 <tr>
-<td><code>&#39;prefix&#39;</code></td>
+<td><code>'prefix'</code></td>
 <td>Only the beginning of the URL needs to match</td>
 </tr>
 
@@ -61,9 +60,9 @@
   <p>By default, all redirects use the <code>prefix</code> strategy.</p>
 
   <h3 id="pathmatch-prefix">
-    <a href="#pathmatch-prefix" class="docs-anchor" tabindex="-1" aria-label="Link to <code>pathMatch: &#39;prefix&#39;</code>"><code>pathMatch: &#39;prefix&#39;</code></a>
+    <a href="#pathmatch-prefix" class="docs-anchor" tabindex="-1" aria-label="Link to <code>pathMatch: 'prefix'</code>"><code>pathMatch: 'prefix'</code></a>
   </h3>
-  <p><code>pathMatch: &#39;prefix&#39;</code> is the default strategy and ideal when you want Angular Router to match all subsequent routes when triggering a redirect.</p>
+  <p><code>pathMatch: 'prefix'</code> is the default strategy and ideal when you want Angular Router to match all subsequent routes when triggering a redirect.</p>
 <div class="docs-code">
     
     <pre class="shiki shiki-themes github-light github-dark" style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;--shiki-light-bg:#fff;--shiki-dark-bg:#24292e" tabindex="0"><code><span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">export</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> const</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> routes</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">:</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> <a href="/api/router/Routes">Routes</a></span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> =</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> [</span></span><span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">  // This redirect route is equivalent to…</span></span><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  { path: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'news'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, redirectTo: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'blog }</span><span style="--shiki-light:#B31D28;--shiki-light-font-style:italic;--shiki-dark:#FDAEB7;--shiki-dark-font-style:italic">,</span></span><span class="line"></span><span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">  // This explicitly defined route redirect pathMatch</span></span><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  { path: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'news'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, redirectTo: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'blog'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, pathMatch: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'prefix'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> },</span></span><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">];</span></span></code></pre>
@@ -77,20 +76,20 @@
   </ul>
   
   <h3 id="pathmatch-full">
-    <a href="#pathmatch-full" class="docs-anchor" tabindex="-1" aria-label="Link to <code>pathMatch: &#39;full&#39;</code>"><code>pathMatch: &#39;full&#39;</code></a>
+    <a href="#pathmatch-full" class="docs-anchor" tabindex="-1" aria-label="Link to <code>pathMatch: 'full'</code>"><code>pathMatch: 'full'</code></a>
   </h3>
-  <p>On the other hand, <code>pathMatch: &#39;full&#39;</code> is useful when you want Angular Router to only redirect a specific path.</p>
+  <p>On the other hand, <code>pathMatch: 'full'</code> is useful when you want Angular Router to only redirect a specific path.</p>
 <div class="docs-code">
     
     <pre class="shiki shiki-themes github-light github-dark" style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;--shiki-light-bg:#fff;--shiki-dark-bg:#24292e" tabindex="0"><code><span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">export</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> const</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> routes</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">:</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> <a href="/api/router/Routes">Routes</a></span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> =</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> [</span></span><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  { path: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">''</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, redirectTo: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'/dashboard'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, pathMatch: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'full'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> },</span></span><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">];</span></span></code></pre>
-  </div><p>In this example, any time the user visits the root URL (i.e., <code>&#39;&#39;</code>), the router redirects that user to the <code>&#39;/dashboard&#39;</code> page.</p>
+  </div><p>In this example, any time the user visits the root URL (i.e., <code>''</code>), the router redirects that user to the <code>'/dashboard'</code> page.</p>
 <p>Any subsequent pages (e.g., <code>/login</code>, <code>/about</code>, <code>/product/id</code>, etc.), are ignored and do not trigger a redirect.</p>
 
     <div class="docs-alert docs-alert-tip">
-    <p><strong>TIP:</strong> Be careful when configuring a redirect on the root page (i.e., <code>&quot;/&quot;</code> or <code>&quot;&quot;</code>). If you do not set <code>pathMatch: &#39;full&#39;</code>, the router will redirect all URLs.</p>
+    <p><strong>TIP:</strong> Be careful when configuring a redirect on the root page (i.e., <code>"/"</code> or <code>""</code>). If you do not set <code>pathMatch: 'full'</code>, the router will redirect all URLs.</p>
 
     </div>
-    <p>To further illustrate this, if the <code>news</code> example from the previous section used <code>pathMatch: &#39;full&#39;</code> instead:</p>
+    <p>To further illustrate this, if the <code>news</code> example from the previous section used <code>pathMatch: 'full'</code> instead:</p>
 <div class="docs-code">
     
     <pre class="shiki shiki-themes github-light github-dark" style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;--shiki-light-bg:#fff;--shiki-dark-bg:#24292e" tabindex="0"><code><span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">export</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> const</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> routes</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">:</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> <a href="/api/router/Routes">Routes</a></span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> =</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> [</span></span><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  { path: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'news'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, redirectTo: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'/blog'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, pathMatch: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'full'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> },</span></span><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">];</span></span></code></pre>
@@ -106,7 +105,7 @@
     <a href="#conditional-redirects" class="docs-anchor" tabindex="-1" aria-label="Link to Conditional redirects">Conditional redirects</a>
   </h2>
   <p>The <code>redirectTo</code> property can also accept a function in order to add logic to how users are redirected.</p>
-<p>The <a href="api/router/RedirectFunction">function</a> only has access part of the <a href="api/router/ActivatedRouteSnapshot"><a href="/api/router/ActivatedRouteSnapshot"><code>ActivatedRouteSnapshot</code></a></a> data since some data is not accurately known at the route matching phase. Examples include: resolved titles, lazy loaded components, etc.</p>
+<p>The <a href="api/router/RedirectFunction">function</a> only has access part of the <a href="api/router/ActivatedRouteSnapshot"></a><a href="/api/router/ActivatedRouteSnapshot"><code>ActivatedRouteSnapshot</code></a> data since some data is not accurately known at the route matching phase. Examples include: resolved titles, lazy loaded components, etc.</p>
 <p>It typically returns a string or <a href="api/router/UrlTree"><code>URLTree</code></a>, but it can also return an observable or promise.</p>
 <p>Here is an example where the user is redirected to different menu based on the time of the day:</p>
 <div class="docs-code">
@@ -115,6 +114,6 @@
   </div><p>To learn more, check out <a href="api/router/RedirectFunction">the API docs for the RedirectFunction</a>.</p>
 
   <h2 id="next-steps">
-    <a href="#next-steps" class="docs-anchor" tabindex="-1" aria-label="Link to Next steps">Next steps</a>
+    <a href="#next-steps" class="docs-anchor" tabindex="-1" aria-label="Link to Next steps">后续步骤</a>
   </h2>
   <p>For more information about the <code>redirectTo</code> property, check out the <a href="api/router/Route#redirectTo">API docs</a>.</p>
