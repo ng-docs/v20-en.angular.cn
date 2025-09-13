@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/content/examples/pipes/src/app/flying-heroes.component.ts"],
+  "sourcesContent": ["\n    #flyers, #all {font-style: italic}\n    button {display: block}\n    input {margin: .25rem .25rem .5rem 0;}\n  "],
+  "mappings": ";AACI,CAAA;AAAA,CAAA;AAAe,cAAA;;AACf;AAAQ,WAAA;;AACR;AAAO,UAAA,QAAA,QAAA,OAAA;;",
+  "names": []
+}

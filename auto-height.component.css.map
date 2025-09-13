@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/content/examples/animations/src/app/animations-package/auto-height.component.css"],
+  "sourcesContent": [".container {\n  display: block;\n  overflow: hidden;\n}\n\n.container .content {\n  padding: 20px;\n  margin-top: 1em;\n  font-weight: bold;\n  font-size: 20px;\n  background-color: blue;\n  color: #ebebeb;\n}\n"],
+  "mappings": ";AAAA,CAAC;AACC,WAAS;AACT,YAAU;AACZ;AAEA,CALC,UAKU,CAAC;AACV,WAAS;AACT,cAAY;AACZ,eAAa;AACb,aAAW;AACX,oBAAkB;AAClB,SAAO;AACT;",
+  "names": []
+}
